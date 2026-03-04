@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, FlatList, NativeModules, Platform, StyleSheet, Text, View } from 'react-native';
 
-// This links to the MovieModule you will create in Android/iOS folders
+
 const { MovieModule } = NativeModules;
 
 const NativeModuleScreen = () => {
@@ -9,12 +9,12 @@ const NativeModuleScreen = () => {
 
   const fetchMovies = async () => {
     try {
-      // TASK: Module should return an array of movies (Promise or callback)
+      
       const data = await MovieModule.getMovies();
       setMovies(data);
     } catch (error) {
       console.log("Bridge Error: Module not linked yet. This is expected until you do 'npx expo prebuild'.", error);
-      // Fallback static data for testing UI before bridging
+      
       setMovies([{ id: 1, title: 'Static Movie 1' }, { id: 2, title: 'Static Movie 2' }]);
     }
   };
