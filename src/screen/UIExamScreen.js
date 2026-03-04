@@ -36,10 +36,10 @@ const UIExamScreen = () => {
     return () => clearInterval(interval);
   }, [mainPlayer, duration]);
 
-  // Warm-up logic: Seek slightly forward so we don't start on a black frame
+  // Seek slightly forward so we don't start on a black frame
   useEffect(() => {
     const timeout = setTimeout(() => {
-        if (thumbPlayer) thumbPlayer.currentTime = 2; // Jump to 2 seconds for a clear bunny shot
+        if (thumbPlayer) thumbPlayer.currentTime = 2; 
     }, 1000);
     return () => clearTimeout(timeout);
   }, [thumbPlayer]);
