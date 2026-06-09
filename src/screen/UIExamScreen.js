@@ -36,7 +36,7 @@ const UIExamScreen = () => {
     return () => clearInterval(interval);
   }, [mainPlayer, duration]);
 
-  // Seek slightly forward so we don't start on a black frame
+  
   useEffect(() => {
     const timeout = setTimeout(() => {
         if (thumbPlayer) thumbPlayer.currentTime = 2; 
