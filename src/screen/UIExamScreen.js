@@ -27,7 +27,7 @@ const UIExamScreen = () => {
     const interval = setInterval(() => {
       if (mainPlayer) {
         setCurrentTime(mainPlayer.currentTime);
-        // Only set duration once
+        
         if (mainPlayer.duration > 0 && duration === 0) {
           setDuration(mainPlayer.duration);
         }
