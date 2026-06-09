@@ -53,7 +53,7 @@ const UIExamScreen = () => {
       const percentage = Math.max(0, Math.min(touchX / SCREEN_WIDTH, 1));
       const seekTime = percentage * duration;
       
-      // Update both players in real-time
+      
       mainPlayer.currentTime = seekTime;
       thumbPlayer.currentTime = seekTime;
     },
